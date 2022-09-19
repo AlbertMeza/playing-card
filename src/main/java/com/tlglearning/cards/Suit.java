@@ -1,4 +1,4 @@
-package com.tlglearning.cards.model;
+package com.tlglearning.cards;
 
 public enum Suit {
   CLUBS('\u2663'), //public static final Suit CLUBS = new Suit('\u2663')
@@ -20,6 +20,6 @@ public enum Suit {
   @Override
   public String toString() {
     String name = name();
-    return name.substring(0,1) + name.substring(1).toLowerCase();
+    return name.charAt(0) + name.substring(1).toLowerCase();
   }
 }

@@ -1,4 +1,4 @@
-package com.tlglearning.cards.model;
+package com.tlglearning.cards;
 
 public class Card {
   private final Rank rank;
@@ -14,6 +14,7 @@ public class Card {
   }
 
   public Suit suit(){
+
     return suit;
   }
 
@@ -21,6 +22,23 @@ public class Card {
   public String toString() {
     return rank.symbol() + suit.symbol();
   }
+
+  @Override
+  public boolean equals(Object obj) {
+    boolean result;
+
+    if (this == obj) {
+      result = true;
+    } else if (obj instanceof Card) {
+      Card other = (Card) obj;
+      result = (this.rank == other.rank && this.suit == other.suit);
+    } else {
+      result = false;
+    }
+    return result;
+  }
+
+
 
   //TODO overide equals
   //TODO override hashCode

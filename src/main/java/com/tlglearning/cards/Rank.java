@@ -1,4 +1,4 @@
-package com.tlglearning.cards.model;
+package com.tlglearning.cards;
 
 public enum Rank {
   ACE("A"),
@@ -28,6 +28,6 @@ public enum Rank {
   @Override
   public String toString() {
     String name = name();
-    return name.substring(0,1) + name.substring(1).toLowerCase();
+    return name.charAt(0) + name.substring(1).toLowerCase();
   }
 }
