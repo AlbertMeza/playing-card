@@ -1,4 +1,4 @@
-package com.tlglearning.cards;
+package com.tlglearning.cards.model;
 
 public enum Rank {
   ACE("A"),

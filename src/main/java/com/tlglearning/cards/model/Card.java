@@ -1,6 +1,6 @@
-package com.tlglearning.cards;
+package com.tlglearning.cards.model;
 
-public class Card {
+public class Card implements Comparable<Card>{
   private final Rank rank;
   private final Suit suit;
 
@@ -22,6 +22,15 @@ public class Card {
   public String toString() {
     return rank.symbol() + suit.symbol();
   }
+
+  public int compareTo(Card other){
+    int comparison = suit.compareTo(other.suit);
+    if (comparison == 0){
+      comparison = rank.compareTo(other.rank);
+    }
+    return comparison;
+  }
+
 
   @Override
   public boolean equals(Object obj) {
