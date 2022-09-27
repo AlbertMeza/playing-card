@@ -19,7 +19,7 @@ public class Main {
     deck.sort(new ColorFirst());
     System.out.println(deck);
   }
-  class ColorFirst implements Comparator<Card> {
+  private static class ColorFirst implements Comparator<Card> {
 
     @Override
     public int compare(Card card1, Card card2) {
